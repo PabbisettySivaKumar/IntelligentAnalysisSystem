@@ -85,15 +85,11 @@ IntelligentAnalysisSystem/
 ├── .env                   # Environment variables (not tracked)
 │
 ├── modules/               # Modular components
-│   ├── data_processor.py  # CSV handling and preprocessing
-│   ├── visualizer.py      # Chart generation logic
-│   ├── nlp_engine.py      # Natural language query processing
-│   ├── text_analyzer.py   # Text analysis features
-│   └── report_generator.py # Report creation module
-│
-├── utils/                 # Utility functions
-    ├── helpers.py         # Helper functions
-    └── config.py          # Configuration settings
+    ├── data_processor.py  # CSV handling and preprocessing
+    ├── visualizer.py      # Chart generation logic
+    ├── nlp_engine.py      # Natural language query processing
+    ├── text_analyzer.py   # Text analysis features
+    └── report_generator.py # Report creation module
 
 ```
 
