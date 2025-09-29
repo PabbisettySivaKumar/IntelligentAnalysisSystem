@@ -5,20 +5,18 @@ from nltk.corpus import stopwords
 import streamlit as st
 
 # Download NLTK resources (only once)
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt')
+resources = {
+    "punkt": "tokenizers/punkt",
+    "punkt_tab": "tokenizers/punkt_tab",   # NEW for NLTK >= 3.9
+    "stopwords": "corpora/stopwords",
+    "vader_lexicon": "sentiment/vader_lexicon",
+}
 
-try:
-    nltk.data.find('corpora/stopwords')
-except LookupError:
-    nltk.download('stopwords')
-
-try:
-    nltk.data.find('sentiment/vader_lexicon')
-except LookupError:
-    nltk.download('vader_lexicon')
+for resource, path in resources.items():
+    try:
+        nltk.data.find(path)
+    except LookupError:
+        nltk.download(resource)
 
 def analyze_text(text):
     results = {}
